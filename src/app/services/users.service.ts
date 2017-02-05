@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable()
 export class UsersService {
 
@@ -11,6 +12,10 @@ export class UsersService {
 
   addUser(user: string){
     
+  }
+
+  getAllUsers(){
+    return "list of all users";
   }
 
 }

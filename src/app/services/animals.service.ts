@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
+import {AnimalModel} from '../models/animal.model';
 
 import 'rxjs/add/operator/map';
 
@@ -10,11 +11,13 @@ export class AnimalsService {
     console.log('Service is ready...');
   }
 
-  addAnmals(animals: string)
-  {}
+  addAnimal(animal: AnimalModel)
+  {
+      return "animal added " + animal.name + " " + animal.animalType;
+  }
 
-  updateAnimals(id:number){
-    return "animal updated" + id;
+  updateAnimals(animal:AnimalModel){
+    return "animal updated" + animal.name;
   }
 
   deleteAnimal(id:number){
