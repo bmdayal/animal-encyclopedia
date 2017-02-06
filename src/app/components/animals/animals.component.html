@@ -2,9 +2,13 @@
 <div class="container">
     <h4>Add customer</h4>
         <!-- name -->
-        <label>Name</label>
+        <label id="lblName">Name</label>
         <input type="text" class="form-control" [(ngModel)]="animal.name">
+        <br />
         <!--display error message if name is not valid-->
+        <label id="lblName2">Name 2: {{animal.name}}</label>
+        
+        <input type="text" class="form-control" ng-model="name">
         <button type="submit" (click)="add()">Submit</button>
         <br />{{message}}
 </div>
